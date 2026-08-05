@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
   selector: 'app-produto',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './produto.html',
   styleUrl: './produto.css',
 })
 export class Produto {
-  nome = 'Produto Exemplo';
-  preco = 149.99;
+  @Input() nome: string = '';
+  @Input() preco: number = 0;
 }
+
