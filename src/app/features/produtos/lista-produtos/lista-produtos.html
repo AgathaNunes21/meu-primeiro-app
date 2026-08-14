@@ -22,6 +22,7 @@
         [nome]="item.nome"
         [preco]="item.preco"
         (produtoSelecionado)="exibirProduto($event)"
+        (produtoAdicionado)="adicionarAoCarrinho($event)"
       />
     }
   }
